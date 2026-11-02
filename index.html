@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="A field guide to specialty coffee: V60 brewing, recipes, roast levels, bean varieties, flavor notes, history, and market analytics." />
+<meta name="theme-color" content="#0f0b08" />
+<title>Slow Bloom — A Specialty Coffee Field Guide</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%95%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="styles.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Slow Bloom home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M6 12h13l-2 7a4 4 0 0 1-4 3h-1a4 4 0 0 1-4-3l-2-7Z" stroke="currentColor" stroke-width="1.6"/><path d="M19 14h3a3 3 0 0 1 0 6h-2" stroke="currentColor" stroke-width="1.6"/><path d="M9 7c0-1.2 1-1.6 1-2.8M13 7c0-1.2 1-1.6 1-2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </span>
+      <span>Slow Bloom</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#v60">V60</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#roast">Roast</a>
+      <a href="#beans">Beans</a>
+      <a href="#flavor">Flavor</a>
+      <a href="#why">Why</a>
+      <a href="#history">History</a>
+      <a href="#data">Data</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-small btn-ghost" href="#data">Market data</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A field guide to the third wave</p>
+        <h1 class="reveal">Specialty coffee,<br /><em>brewed with intent.</em></h1>
+        <p class="lede reveal">Everything that makes a cup worth slowing down for — the V60, the recipes, the roast, the bean, the flavor, and the numbers behind the boom.</p>
+        <div class="hero-cta reveal">
+          <a class="btn" href="#recipes">Start brewing</a>
+          <a class="btn btn-ghost" href="#data">See the analytics</a>
+        </div>
+        <dl class="hero-facts reveal">
+          <div><dt>Cupping score</dt><dd>80+</dd></div>
+          <div><dt>Golden ratio</dt><dd>1:16</dd></div>
+          <div><dt>Market CAGR</dt><dd>~12.5%</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-art reveal" aria-hidden="true">
+        <div class="art-glow"></div>
+        <svg class="v60-svg" viewBox="0 0 460 520" role="img" aria-label="A V60 dripper sitting on a glass server">
+          <defs>
+            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f4ead9" stop-opacity=".26"/>
+              <stop offset="1" stop-color="#f4ead9" stop-opacity=".05"/>
+            </linearGradient>
+            <linearGradient id="brew" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c08350"/>
+              <stop offset="1" stop-color="#5e3119"/>
+            </linearGradient>
+            <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fbf6ec"/>
+              <stop offset=".55" stop-color="#e6d7c1"/>
+              <stop offset="1" stop-color="#bfa98c"/>
+            </linearGradient>
+            <radialGradient id="aura" cx="50%" cy="35%" r="62%">
+              <stop offset="0" stop-color="#d99a5b" stop-opacity=".30"/>
+              <stop offset="1" stop-color="#d99a5b" stop-opacity="0"/>
+            </radialGradient>
+            <clipPath id="serverClip">
+              <path d="M185 276 L173 306 C138 322 132 384 148 430 C159 460 182 472 230 472 C278 472 301 460 312 430 C328 384 322 322 287 306 L275 276 Z"/>
+            </clipPath>
+          </defs>
+
+          <circle cx="230" cy="225" r="205" fill="url(#aura)"/>
+
+          <g class="steam" stroke="#f4ead9" stroke-width="3.5" fill="none" opacity=".28" stroke-linecap="round">
+            <path d="M185 128 C 168 100, 202 82, 186 48" />
+            <path d="M230 122 C 214 92, 246 74, 232 38" />
+            <path d="M275 128 C 258 100, 292 82, 276 48" />
+          </g>
+
+          <ellipse cx="230" cy="478" rx="138" ry="17" fill="#000" opacity=".38"/>
+
+          <path d="M185 276 L173 306 C138 322 132 384 148 430 C159 460 182 472 230 472 C278 472 301 460 312 430 C328 384 322 322 287 306 L275 276 Z"
+                fill="url(#glass)" stroke="#f4ead9" stroke-opacity=".28" stroke-width="2.5"/>
+          <g clip-path="url(#serverClip)">
+            <rect x="120" y="366" width="220" height="130" fill="url(#brew)"/>
+            <ellipse cx="230" cy="366" rx="86" ry="13" fill="#c08350"/>
+            <ellipse cx="213" cy="363" rx="34" ry="5" fill="#d99a5b" opacity=".45"/>
+          </g>
+          <path d="M312 334 C 360 330, 372 402, 312 418" fill="none" stroke="#f4ead9" stroke-opacity=".22" stroke-width="9" stroke-linecap="round"/>
+          <path d="M312 334 C 360 330, 372 402, 312 418" fill="none" stroke="#0f0b08" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+
+          <path d="M230 272 L230 362" stroke="#8a4b2a" stroke-width="4" opacity=".85" stroke-linecap="round"/>
+
+          <path d="M118 156 L342 156 L279 272 Q230 288 181 272 Z" fill="url(#ceramic)"/>
+          <path d="M118 156 L342 156 L333 178 L127 178 Z" fill="#fbf6ec" opacity=".55"/>
+          <path d="M146 166 L314 166 L265 258 Q230 271 195 258 Z" fill="#c9b393"/>
+          <ellipse cx="230" cy="256" rx="47" ry="12" fill="#4b2a17"/>
+          <ellipse cx="230" cy="253" rx="40" ry="9" fill="#6d3d22"/>
+          <g fill="#8a5531" opacity=".8">
+            <circle cx="212" cy="252" r="3"/><circle cx="228" cy="249" r="2.6"/><circle cx="243" cy="253" r="3"/>
+          </g>
+          <ellipse cx="230" cy="156" rx="112" ry="16" fill="#fbf6ec"/>
+          <ellipse cx="230" cy="156" rx="99" ry="11" fill="#e0cfb6"/>
+          <path d="M334 176 C 396 184, 392 238, 326 236" fill="none" stroke="#e6d7c1" stroke-width="13" stroke-linecap="round"/>
+          <path d="M334 176 C 396 184, 392 238, 326 236" fill="none" stroke="#0f0b08" stroke-opacity=".25" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+
+        <div class="float-chip chip-a"><strong>92–96°C</strong><span>water temp</span></div>
+        <div class="float-chip chip-b"><strong>1 : 16</strong><span>coffee to water</span></div>
+        <div class="float-chip chip-c"><strong>2:30–3:30</strong><span>total brew time</span></div>
+        <div class="float-chip chip-d"><strong>V60 · 02</strong><span>60° cone</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span>Scroll to explore</div>
+  </section>
+
+  <section class="strip">
+    <div class="wrap strip-grid">
+      <div class="strip-item reveal"><span class="num">80+</span><span class="cap">SCA cupping score to qualify as specialty</span></div>
+      <div class="strip-item reveal"><span class="num">60°</span><span class="cap">Cone angle that shaped modern pour-over</span></div>
+      <div class="strip-item reveal"><span class="num">$60B+</span><span class="cap">Estimated global specialty coffee market</span></div>
+      <div class="strip-item reveal"><span class="num">3rd</span><span class="cap">Wave — coffee as craft, provenance, and experience</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="v60">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">The brewer</p>
+        <h2 class="reveal">Why the V60 is <em>the benchmark</em></h2>
+        <p class="section-lede reveal">A cone, a paper filter, and a spiral of ribs. The Hario V60 looks simple, but every detail is a variable you can control — which is exactly why it became the reference brewer for specialty coffee.</p>
+      </header>
+
+      <div class="v60-grid">
+        <div class="v60-features">
+          <article class="feature reveal">
+            <span class="feature-icon">01</span>
+            <h3>60-degree cone</h3>
+            <p>The steep walls create a deep coffee bed. Water travels through more grounds, extending contact time and pulling out clarity rather than muddiness.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">02</span>
+            <h3>Spiral ribs</h3>
+            <p>Raised ribs hold the paper off the ceramic, letting air escape and water flow evenly. The result is a faster, more consistent drawdown.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">03</span>
+            <h3>Single large hole</h3>
+            <p>Unlike flat-bed brewers with restricted flow, the V60 lets you steer extraction with grind size, pour speed, and pour structure.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="feature-icon">04</span>
+            <h3>Paper filter clarity</h3>
+            <p>Rinsed paper traps fines and oils, producing the tea-like transparency that defines a great light-roast pour-over.</p>
+          </article>
+        </div>
+
+        <aside class="calc-card reveal" aria-labelledby="calcTitle">
+          <div class="calc-head">
+            <p class="eyebrow">Brew calculator</p>
+            <h3 id="calcTitle">Dial in your dose</h3>
+            <p class="calc-sub">Enter your coffee weight, pick a ratio, and get the water weight.</p>
+          </div>
+
+          <label class="field">
+            <span>Coffee dose <b id="doseOut">18 g</b></span>
+            <input id="dose" type="range" min="10" max="40" step="1" value="18" />
+          </label>
+
+          <div class="ratio-row" role="group" aria-label="Brew ratio">
+            <button class="ratio-btn" data-ratio="15">1:15</button>
+            <button class="ratio-btn is-active" data-ratio="16">1:16</button>
+            <button class="ratio-btn" data-ratio="17">1:17</button>
+          </div>
+
+          <div class="calc-result">
+            <div>
+              <span class="calc-label">Water</span>
+              <strong id="waterOut">288 g</strong>
+            </div>
+            <div>
+              <span class="calc-label">Bloom</span>
+              <strong id="bloomOut">36 g</strong>
+            </div>
+          </div>
+
+          <ul class="calc-notes" id="calcNotes">
+            <li><span>0:00</span> Bloom with 2× the dose, swirl gently</li>
+            <li><span>0:45</span> Pour to 60% of total water</li>
+            <li><span>1:15</span> Finish the pour in slow spirals</li>
+          </ul>
+          <p class="calc-foot">Start at 94°C and medium-fine. Adjust grind before changing anything else.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="recipes">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">Recipes</p>
+        <h2 class="reveal">Five V60 recipes, <em>five personalities</em></h2>
+        <p class="section-lede reveal">Same brewer, different outcomes. Use these as starting points, then change one variable at a time — grind, temperature, pour structure, or ratio.</p>
+      </header>
+
+      <div class="recipe-grid">
+        <article class="recipe reveal">
+          <div class="recipe-top">
+            <span class="tag tag-accent">Everyday</span>
+            <span class="recipe-time">2:45</span>
+          </div>
+          <h3>The Daily 1:16</h3>
+          <p class="recipe-desc">The forgiving baseline. Balanced sweetness, medium body, and enough clarity to taste origin notes without fuss.</p>
+          <dl class="recipe-meta">
+            <div><dt>Coffee</dt><dd>18 g</dd></div>
+            <div><dt>Water</dt><dd>288 g</dd></div>
+            <div><dt>Temp</dt><dd>94°C</dd></div>
+            <div><dt>Grind</dt><dd>Medium-fine</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Rinse the filter, warm the server, discard the water.</li>
+            <li>Bloom with 36 g for 40 seconds and swirl gently.</li>
+            <li>Pour in two stages to 180 g and then 288 g.</li>
+            <li>Gently swirl the dripper and let it draw down by 2:45.</li>
+          </ol>
+          <p class="recipe-best"><span>Best for</span> Washed Central American coffees, medium-light roasts.</p>
+        </article>
+
+        <article class="recipe reveal">
+          <div class="recipe-top">
+            <span class="tag">Competition</span>
+            <span class="recipe-time">3:30</span>
+          </div>
+          <h3>Hoffmann Ultimate</h3>
+          <p class="recipe-desc">High extraction with a coarse-ish grind and a late swirl. Sweet, layered, and remarkably consistent once dialed.</p>
+          <dl class="recipe-meta">
+            <div><dt>Coffee</dt><dd>15 g</dd></div>
+            <div><dt>Water</dt><dd>250 g</dd></div>
+            <div><dt>Temp</dt><dd>96°C</dd></div>
+            <div><dt>Grind</dt><dd>Medium-fine</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Bloom with 50 g, swirl, and wait until 0:45.</li>
+            <li>Pour to 150 g by 1:10 in slow spirals.</li>
+            <li>Pour to 250 g by 1:30, keeping the bed level.</li>
+            <li>Swirl once more; drawdown should finish near 3:30.</li>
+          </ol>
+          <p class="recipe-best"><span>Best for</span> Light roasts and floral, high-grown coffees.</p>
+        </article>
+
+        <article class="recipe reveal">
+          <div class="recipe-top">
+            <span class="tag">Method</span>
+            <span class="recipe-time">3:30</span>
+          </div>
+          <h3>Tetsu Kasuya 4:6</h3>
+          <p class="recipe-desc">Five equal pours split extraction into two dials: the first 40% sets sweetness and acidity, the last 60% sets strength.</p>
+          <dl class="recipe-meta">
+            <div><dt>Coffee</dt><dd>20 g</dd></div>
+            <div><dt>Water</dt><dd>300 g</dd></div>
+            <div><dt>Temp</dt><dd>92°C</dd></div>
+            <div><dt>Grind</dt><dd>Medium-coarse</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Pour 60 g at 0:00, then 60 g at 0:45.</li>
+            <li>Pour 60 g at 1:30, 60 g at 2:10, and 60 g at 2:50.</li>
+            <li>Keep pours gentle and centered to preserve the bed.</li>
+            <li>Drawdown should land around 3:30–4:00.</li>
+          </ol>
+          <p class="recipe-best"><span>Best for</span> Experimenting: sweeter first pours, stronger later pours.</p>
+        </article>
+
+        <article class="recipe reveal">
+          <div class="recipe-top">
+            <span class="tag">Single pour</span>
+            <span class="recipe-time">2:30</span>
+          </div>
+          <h3>Rao-Style Single Pour</h3>
+          <p class="recipe-desc">One controlled pour and a finishing spin. Great for big, sweet coffees when you want body without losing definition.</p>
+          <dl class="recipe-meta">
+            <div><dt>Coffee</dt><dd>22 g</dd></div>
+            <div><dt>Water</dt><dd>352 g</dd></div>
+            <div><dt>Temp</dt><dd>96°C</dd></div>
+            <div><dt>Grind</dt><dd>Medium</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Bloom with 66 g for 45 seconds.</li>
+            <li>Pour the remaining 286 g in a single slow spiral.</li>
+            <li>Spin the dripper to level the bed and seal the drawdown.</li>
+            <li>Target 2:30–3:00 total brew time.</li>
+          </ol>
+          <p class="recipe-best"><span>Best for</span> Natural-process coffees and medium roasts.</p>
+        </article>
+
+        <article class="recipe reveal">
+          <div class="recipe-top">
+            <span class="tag">Cold</span>
+            <span class="recipe-time">2:30</span>
+          </div>
+          <h3>Flash-Chilled Iced V60</h3>
+          <p class="recipe-desc">Brew hot and straight onto ice. The rapid chill locks in aromatics for a bright, juicy summer cup.</p>
+          <dl class="recipe-meta">
+            <div><dt>Coffee</dt><dd>20 g</dd></div>
+            <div><dt>Water</dt><dd>150 g + 150 g ice</dd></div>
+            <div><dt>Temp</dt><dd>94°C</dd></div>
+            <div><dt>Grind</dt><dd>Medium</dd></div>
+          </dl>
+          <ol class="steps">
+            <li>Place 150 g of ice in the server.</li>
+            <li>Bloom with 40 g for 40 seconds.</li>
+            <li>Pour the remaining 110 g of hot water in two stages.</li>
+            <li>Swirl the server until the ice has fully melted.</li>
+          </ol>
+          <p class="recipe-best"><span>Best for</span> Ethiopian and Kenyan coffees with vivid fruit notes.</p>
+        </article>
+
+        <article class="recipe reveal recipe-dial">
+          <div class="recipe-top">
+            <span class="tag tag-accent">Troubleshoot</span>
+            <span class="recipe-time">Dial-in</span>
+          </div>
+          <h3>Taste, then adjust</h3>
+          <p class="recipe-desc">Sour and thin means under-extracted. Bitter and drying means over-extracted. Change one variable, then taste again.</p>
+          <table class="dial-table">
+            <thead><tr><th>What you taste</th><th>What to change</th></tr></thead>
+            <tbody>
+              <tr><td>Sour, sharp, hollow</td><td>Grind finer · hotter water · slower pour</td></tr>
+              <tr><td>Bitter, ashy, drying</td><td>Grind coarser · cooler water · faster pour</td></tr>
+              <tr><td>Weak but balanced</td><td>Increase dose · tighten ratio</td></tr>
+              <tr><td>Muddy, low clarity</td><td>Rinse filter · reduce agitation</td></tr>
+            </tbody>
+          </table>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roast">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">Roast levels</p>
+        <h2 class="reveal">Roast is a <em>design decision</em></h2>
+        <p class="section-lede reveal">Roasting develops sweetness and aroma while reducing acidity and origin character. In specialty coffee, lighter is generally the starting point — but the right roast depends on the bean, the brewer, and what you want in the cup.</p>
+      </header>
+
+      <div class="roast-scale reveal" aria-hidden="true">
+        <div class="roast-bar"></div>
+        <div class="roast-marks">
+          <span style="left:0%">Light</span>
+          <span style="left:25%">Medium-light</span>
+          <span style="left:50%">Medium</span>
+          <span style="left:75%">Medium-dark</span>
+          <span style="left:100%">Dark</span>
+        </div>
+      </div>
+
+      <div class="roast-grid">
+        <article class="roast-card reveal">
+          <div class="bean-swatch" style="--swatch:#d8b692"></div>
+          <h3>Light</h3>
+          <p class="roast-range">Internal temp ≈ 196–205°C · Agtron 70–80</p>
+          <p>Bright acidity, floral and fruit-forward, origin-transparent. Can taste grassy or underdeveloped if roasted too fast.</p>
+          <ul><li>V60, Chemex, AeroPress</li><li>Higher water temp: 94–96°C</li></ul>
+        </article>
+        <article class="roast-card reveal">
+          <div class="bean-swatch" style="--swatch:#b98a5f"></div>
+          <h3>Medium-light</h3>
+          <p class="roast-range">≈ 205–212°C · Agtron 60–70</p>
+          <p>The specialty sweet spot. Balanced acidity, caramel sweetness, and clear origin notes without roast dominance.</p>
+          <ul><li>V60, Kalita, espresso</li><li>Water temp: 92–95°C</li></ul>
+        </article>
+        <article class="roast-card reveal">
+          <div class="bean-swatch" style="--swatch:#955f3a"></div>
+          <h3>Medium</h3>
+          <p class="roast-range">≈ 212–220°C · Agtron 50–60</p>
+          <p>Chocolate, nuts, and cooked fruit. Acidity is softened and body increases. A crowd-pleasing, versatile roast.</p>
+          <ul><li>V60, drip, espresso</li><li>Water temp: 90–94°C</li></ul>
+        </article>
+        <article class="roast-card reveal">
+          <div class="bean-swatch" style="--swatch:#6c3d24"></div>
+          <h3>Medium-dark</h3>
+          <p class="roast-range">≈ 220–230°C · Agtron 40–50</p>
+          <p>Dark chocolate, molasses, toasted nuts. Origin character starts to recede behind roast flavor and heavier body.</p>
+          <ul><li>Espresso, milk drinks</li><li>Water temp: 88–92°C</li></ul>
+        </article>
+        <article class="roast-card reveal">
+          <div class="bean-swatch" style="--swatch:#3a2016"></div>
+          <h3>Dark</h3>
+          <p class="roast-range">≈ 230–245°C · Agtron 30–40</p>
+          <p>Smoky, bittersweet, low acidity. The roast — not the bean — leads. Common in traditional espresso and supermarket blends.</p>
+          <ul><li>Espresso, French press</li><li>Water temp: 85–90°C</li></ul>
+        </article>
+      </div>
+      <p class="fineprint reveal">Temperatures are bean-temperature approximations; Agtron values vary by roaster and scale. Always ask your roaster for their reference points.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="beans">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">The beans</p>
+        <h2 class="reveal">Four species, <em>countless varieties</em></h2>
+        <p class="section-lede reveal">Almost all specialty coffee is Arabica — but species and variety shape acidity, body, disease resistance, and the flavors a farmer can sell.</p>
+      </header>
+
+      <div class="table-wrap reveal">
+        <table class="data-table">
+          <thead>
+            <tr><th>Species</th><th>Share of production</th><th>Growing altitude</th><th>Caffeine</th><th>Cup profile</th><th>Role</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Arabica</strong></td><td>~60%</td><td>600–2,200 m</td><td>~1.2–1.5%</td>
+              <td>Sweet, aromatic, bright acidity, complex</td><td>The backbone of specialty coffee</td>
+            </tr>
+            <tr>
+              <td><strong>Robusta</strong></td><td>~40%</td><td>0–800 m</td><td>~2.2–2.7%</td>
+              <td>Bold, bitter, nutty, heavy body</td><td>Instant coffee, crema, blends</td>
+            </tr>
+            <tr>
+              <td><strong>Liberica</strong></td><td>&lt;1%</td><td>0–600 m</td><td>~1.4%</td>
+              <td>Smoky, woody, jackfruit, savory</td><td>Regional specialty, climate resilience</td>
+            </tr>
+            <tr>
+              <td><strong>Excelsa</strong></td><td>&lt;1%</td><td>0–1,000 m</td><td>~1.0%</td>
+              <td>Tart, fruity, dark, complex</td><td>Niche blending, Southeast Asia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="variety-grid">
+        <article class="variety reveal"><span class="tag">Ethiopia</span><h3>Geisha / Gesha</h3><p>Jasmine, bergamot, peach. Famous for record-breaking auction lots and tea-like clarity.</p></article>
+        <article class="variety reveal"><span class="tag">Americas</span><h3>Bourbon</h3><p>Red fruit, caramel, balanced sweetness. A foundational variety and parent of many hybrids.</p></article>
+        <article class="variety reveal"><span class="tag">Americas</span><h3>Typica</h3><p>Clean, sweet, low yield. The original Arabian lineage that spread through the coffee world.</p></article>
+        <article class="variety reveal"><span class="tag">Kenya</span><h3>SL28</h3><p>Blackcurrant, tomato-leaf savoriness, juicy acidity. Drought-tolerant and highly prized.</p></article>
+        <article class="variety reveal"><span class="tag">Central America</span><h3>Pacamara</h3><p>Chocolate, stone fruit, spice. A large-bean Pacas × Maragogype cross with big body.</p></article>
+        <article class="variety reveal"><span class="tag">Brazil</span><h3>Caturra</h3><p>Citrus, nuts, gentle sweetness. Compact, productive, and common in Brazilian blends.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="flavor">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">Flavor</p>
+        <h2 class="reveal">A vocabulary for <em>what you taste</em></h2>
+        <p class="section-lede reveal">Flavor is aroma, acidity, sweetness, bitterness, body, and finish working together. These six families are a practical shortcut to describing — and choosing — coffee.</p>
+      </header>
+
+      <div class="flavor-grid">
+        <article class="flavor reveal" style="--fam:#c96f5d">
+          <h3>Fruity <span>berry · citrus · stone fruit</span></h3>
+          <p>Natural-process coffees and Ethiopian heirlooms lean here. Look for blueberry, blackcurrant, peach, lemon, and dried fig.</p>
+          <div class="chips"><span>Blueberry</span><span>Blackcurrant</span><span>Peach</span><span>Bergamot</span><span>Fig</span></div>
+        </article>
+        <article class="flavor reveal" style="--fam:#c9a6c4">
+          <h3>Floral <span>jasmine · rose · orange blossom</span></h3>
+          <p>The hallmark of high-grown Geisha and washed Ethiopian coffees. Delicate, aromatic, and easily buried by dark roasting.</p>
+          <div class="chips"><span>Jasmine</span><span>Rose</span><span>Honeysuckle</span><span>Lavender</span></div>
+        </article>
+        <article class="flavor reveal" style="--fam:#d9a15b">
+          <h3>Sweet <span>caramel · honey · brown sugar</span></h3>
+          <p>The result of Maillard reactions during roasting. Medium roasts amplify it; under-developed coffee tastes sweet but hollow.</p>
+          <div class="chips"><span>Caramel</span><span>Honey</span><span>Panela</span><span>Maple</span></div>
+        </article>
+        <article class="flavor reveal" style="--fam:#a9815b">
+          <h3>Nutty &amp; cocoa <span>almond · hazelnut · chocolate</span></h3>
+          <p>Comforting and familiar. Common in Brazilian and Central American coffees, especially at medium and medium-dark roasts.</p>
+          <div class="chips"><span>Almond</span><span>Hazelnut</span><span>Cocoa</span><span>Dark chocolate</span></div>
+        </article>
+        <article class="flavor reveal" style="--fam:#b9793f">
+          <h3>Spice <span>cinnamon · clove · black pepper</span></h3>
+          <p>Often a sign of complexity rather than heat. Spice notes pair well with milk and darker roast profiles.</p>
+          <div class="chips"><span>Cinnamon</span><span>Clove</span><span>Cardamom</span><span>Pepper</span></div>
+        </article>
+        <article class="flavor reveal" style="--fam:#8a9a6b">
+          <h3>Earthy &amp; green <span>herbal · woody · vegetal</span></h3>
+          <p>Can be desirable savoriness (tomato leaf, cedar) or a defect (raw potato, mold). Context and intensity matter.</p>
+          <div class="chips"><span>Cedar</span><span>Tomato leaf</span><span>Green tea</span><span>Mushroom</span></div>
+        </article>
+      </div>
+
+      <div class="taste-panel reveal">
+        <div>
+          <p class="eyebrow">How to taste</p>
+          <h3>Four steps, no snobbery required</h3>
+        </div>
+        <ol class="taste-steps">
+          <li><strong>Aroma</strong><span>Smell before you sip. Most of flavor is retronasal.</span></li>
+          <li><strong>Slurp</strong><span>Aerate the coffee to spread it across your palate.</span></li>
+          <li><strong>Structure</strong><span>Notice acidity, sweetness, body, and balance.</span></li>
+          <li><strong>Finish</strong><span>Wait ten seconds. The aftertaste tells you about quality.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="why">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">The case</p>
+        <h2 class="reveal">Why specialty is <em>worth it</em></h2>
+        <p class="section-lede reveal">Specialty is not just a price point. It is a quality standard, a supply-chain relationship, and a way of brewing that rewards attention.</p>
+      </header>
+
+      <div class="why-grid">
+        <article class="why reveal"><span class="why-num">01</span><h3>A measurable standard</h3><p>Coffee scoring 80+ on the 100-point SCA cupping scale has documented sweetness, acidity, flavor, and cleanliness — not just marketing language.</p></article>
+        <article class="why reveal"><span class="why-num">02</span><h3>Traceable origin</h3><p>Farm, producer, altitude, variety, and process are usually on the bag. You can taste a place, and the farmer can be paid for it.</p></article>
+        <article class="why reveal"><span class="why-num">03</span><h3>Freshness matters</h3><p>Coffee is agricultural. Roast dates, harvest cycles, and storage affect the cup far more than most equipment upgrades.</p></article>
+        <article class="why reveal"><span class="why-num">04</span><h3>Better economics</h3><p>Direct-trade and transparent pricing models can pay producers well above commodity rates, supporting quality and resilience.</p></article>
+        <article class="why reveal"><span class="why-num">05</span><h3>You control the cup</h3><p>Grind, ratio, water, temperature, and pour structure are all yours. A modest setup can outperform a bad café.</p></article>
+        <article class="why reveal"><span class="why-num">06</span><h3>Depth of experience</h3><p>From tea-like Geisha to syrupy natural espresso, specialty covers a sensory range that commodity coffee rarely touches.</p></article>
+      </div>
+
+      <blockquote class="quote reveal">
+        <p>“Specialty coffee is the difference between drinking coffee because you have to and drinking it because you want to.”</p>
+        <cite>— The third-wave premise, in one line</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="section" id="history">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">History</p>
+        <h2 class="reveal">From legend to <em>third wave</em></h2>
+        <p class="section-lede reveal">Coffee has been traded for centuries. Specialty coffee is recent: a quality movement that turned a commodity into a craft.</p>
+      </header>
+
+      <ol class="timeline">
+        <li class="reveal"><span class="tl-year">c. 850</span><div><h3>The legend of Kaldi</h3><p>Ethiopian lore credits a goat herder with noticing the energizing effect of coffee cherries. The plant’s true home is the Ethiopian highlands.</p></div></li>
+        <li class="reveal"><span class="tl-year">1400s</span><div><h3>Yemen and the port of Mocha</h3><p>Sufi communities in Yemen brew and trade coffee. Mocha becomes synonymous with the drink and the port.</p></div></li>
+        <li class="reveal"><span class="tl-year">1600s</span><div><h3>Coffee houses spread across Europe</h3><p>London, Paris, and Vienna turn coffee into a social institution — and a political one.</p></div></li>
+        <li class="reveal"><span class="tl-year">1908</span><div><h3>Melitta Bentz invents the paper filter</h3><p>A German housewife patents a blotting-paper filter, making clean, sediment-free brewing a household possibility.</p></div></li>
+        <li class="reveal"><span class="tl-year">1974</span><div><h3>“Specialty coffee” gets a name</h3><p>Erna Knutsen coins the term to describe high-quality beans from specific micro-lots — the origin of the category.</p></div></li>
+        <li class="reveal"><span class="tl-year">1982</span><div><h3>The SCAA is founded</h3><p>The Specialty Coffee Association of America formalizes grading, education, and quality standards for the industry.</p></div></li>
+        <li class="reveal"><span class="tl-year">2002</span><div><h3>80 points becomes the line</h3><p>The industry converges on the 100-point cupping scale, with 80+ generally accepted as the specialty threshold.</p></div></li>
+        <li class="reveal"><span class="tl-year">2000s</span><div><h3>The third wave</h3><p>Roasters treat coffee like wine: single origins, light roasts, precise brewing, and provenance-forward menus.</p></div></li>
+        <li class="reveal"><span class="tl-year">2010s</span><div><h3>Home brewing goes pro</h3><p>V60, AeroPress, and digital scales move café techniques into home kitchens. World Brewers Cup popularizes recipes.</p></div></li>
+        <li class="reveal"><span class="tl-year">2024+</span><div><h3>A mainstream premium market</h3><p>Specialty coffee becomes a multi-billion-dollar global segment, with growth led by Asia-Pacific and direct-to-consumer subscriptions.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="data">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="eyebrow reveal">Analytics</p>
+        <h2 class="reveal">The growth <em>behind the cup</em></h2>
+        <p class="section-lede reveal">Specialty coffee has moved from niche to mainstream. These charts show the scale, the regional balance, and where growth is coming from.</p>
+      </header>
+
+      <div class="kpis">
+        <div class="kpi reveal"><span class="kpi-value" data-target="61" data-prefix="$" data-suffix="B">$61B</span><span class="kpi-label">Estimated global specialty market, 2024</span></div>
+        <div class="kpi reveal"><span class="kpi-value" data-target="12.5" data-suffix="%" data-decimals="1">12.5%</span><span class="kpi-label">Projected CAGR, 2024–2030</span></div>
+        <div class="kpi reveal"><span class="kpi-value" data-target="60" data-suffix="%">60%</span><span class="kpi-label">Approx. specialty share of US coffee retail</span></div>
+        <div class="kpi reveal"><span class="kpi-value" data-target="2.25" data-suffix="B" data-decimals="2">2.25B</span><span class="kpi-label">Cups of coffee enjoyed worldwide each day</span></div>
+      </div>
+
+      <div class="data-grid">
+        <article class="chart-card chart-wide reveal">
+          <div class="chart-head">
+            <div><p class="eyebrow">Market size</p><h3>Global specialty coffee, USD billions</h3></div>
+            <div class="legend"><span class="dot solid"></span>Actual / estimate <span class="dot dashed"></span> Forecast</div>
+          </div>
+          <div class="chart-wrap"><canvas id="marketChart" role="img" aria-label="Line chart of global specialty coffee market size from 2016 to 2030, rising from 34 billion to a forecast 118 billion US dollars"></canvas><div class="chart-tip" id="marketTip"></div></div>
+          <p class="chart-note">2020 reflects pandemic disruption; 2024 onward are projections at roughly 12–13% annual growth.</p>
+        </article>
+
+        <article class="chart-card reveal">
+          <div class="chart-head"><div><p class="eyebrow">Demand</p><h3>Coffee consumption by region</h3></div></div>
+          <div class="chart-wrap"><canvas id="regionChart" role="img" aria-label="Bar chart of coffee consumption by region in 2024, led by Europe at 54 million bags"></canvas><div class="chart-tip" id="regionTip"></div></div>
+          <p class="chart-note">Million 60-kg bags, 2024 estimates. Europe remains the largest consuming region.</p>
+        </article>
+
+        <article class="chart-card reveal">
+          <div class="chart-head"><div><p class="eyebrow">Production</p><h3>Arabica vs. Robusta</h3></div></div>
+          <div class="chart-wrap chart-wrap-donut"><canvas id="beanChart" role="img" aria-label="Donut chart showing Arabica at 60 percent and Robusta at 40 percent of global coffee production"></canvas></div>
+          <div class="donut-legend">
+            <span><i style="background:#d99a5b"></i>Arabica <b>~60%</b></span>
+            <span><i style="background:#7f5a3f"></i>Robusta <b>~40%</b></span>
+          </div>
+          <p class="chart-note">Specialty coffee is overwhelmingly Arabica, though robusta is gaining ground in blends and climate-resilient farming.</p>
+        </article>
+
+        <article class="chart-card chart-wide reveal">
+          <div class="chart-head">
+            <div><p class="eyebrow">Outlook</p><h3>Projected annual growth by segment</h3></div>
+            <span class="pill">2024–2030 CAGR</span>
+          </div>
+          <div class="segment-bars">
+            <div class="segment"><span class="seg-label">Specialty coffee</span><div class="seg-track"><span class="seg-fill" data-w="100" style="--c:#d99a5b"></span></div><span class="seg-val">12.5%</span></div>
+            <div class="segment"><span class="seg-label">Ready-to-drink</span><div class="seg-track"><span class="seg-fill" data-w="67" style="--c:#c98a5d"></span></div><span class="seg-val">8.4%</span></div>
+            <div class="segment"><span class="seg-label">Single-serve pods</span><div class="seg-track"><span class="seg-fill" data-w="41" style="--c:#a9815b"></span></div><span class="seg-val">5.1%</span></div>
+            <div class="segment"><span class="seg-label">Traditional retail</span><div class="seg-track"><span class="seg-fill" data-w="18" style="--c:#7f6a55"></span></div><span class="seg-val">2.2%</span></div>
+          </div>
+          <p class="chart-note">Specialty is the fastest-growing segment, driven by younger drinkers, home brewing, and premium subscription models.</p>
+        </article>
+      </div>
+
+      <div class="takeaways reveal">
+        <h3>What the numbers say</h3>
+        <div class="takeaway-grid">
+          <div><strong>Premium is resilient</strong><p>Even during inflation, consumers traded up for quality and experience rather than trading down.</p></div>
+          <div><strong>Asia-Pacific leads growth</strong><p>Urbanization, café culture, and a young population are expanding specialty demand fastest in Asia.</p></div>
+          <div><strong>Home brewing is the new normal</strong><p>Grinders, scales, and pour-over kits turned the kitchen into the second wave of specialty consumption.</p></div>
+        </div>
+      </div>
+
+      <p class="sources reveal">Figures are rounded, illustrative estimates compiled from publicly reported industry research (including SCA, ICO, World Coffee Research, NCA, and market-research summaries). Numbers vary by methodology and source — verify before citing commercially.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M6 12h13l-2 7a4 4 0 0 1-4 3h-1a4 4 0 0 1-4-3l-2-7Z" stroke="currentColor" stroke-width="1.6"/><path d="M19 14h3a3 3 0 0 1 0 6h-2" stroke="currentColor" stroke-width="1.6"/><path d="M9 7c0-1.2 1-1.6 1-2.8M13 7c0-1.2 1-1.6 1-2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </span>Slow Bloom</a>
+      <p class="footer-tag">A specialty coffee field guide. Brew slowly, taste deliberately.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#v60">V60</a><a href="#recipes">Recipes</a><a href="#roast">Roast</a><a href="#beans">Beans</a><a href="#flavor">Flavor</a><a href="#data">Data</a>
+    </div>
+    <p class="footer-fine">Built as a static site. No tracking, no cookies. Content is educational; market figures are approximate.</p>
+  </div>
+</footer>
+
+</body>
+</html>
